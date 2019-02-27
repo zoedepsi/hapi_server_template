@@ -5,6 +5,7 @@ const routesHelloHapi = require('./routes/hello-hapi');
 const routesShops = require('./routes/shops');
 const routesOrders = require('./routes/orders');
 const routesUser = require('./routes/user');
+const routesUsers = require('./routes/users');
 const pluginHapiSwagger = require('./plugins/hapi-swagger');
 const pluginHapiPagination = require('./plugins/hapi-pagination');
 const hapiAuthJWT2 = require('hapi-auth-jwt2');
@@ -28,7 +29,8 @@ const init = async () => {
         ...routesHelloHapi,
         ...routesShops,
         ...routesOrders,
-        ...routesUser
+        ...routesUser,
+        ...routesUsers
     ]);
 
     //启动服务
